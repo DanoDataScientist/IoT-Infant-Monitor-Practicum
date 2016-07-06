@@ -8,6 +8,7 @@ Hook up an infrared sensor to the GPIO ins, as well as ground/5V; this depends i
 lastscrumdemo.py needs to be edited with the appropriate phone#'s for the twilio feautre, and possibly ssh keys for the hosting webpage.
 
 Afterward, save RPi/lastscrumdemo.py on an RPi and automate with the following on the board (tested only on Jessie Raspbian):
+#
 1. Edit /etc/inittab; comment out 1:2345:respawn:/sbin/getty 115200 tty1
 2. Replace with 1:2345:respawn:/bin/login -f pi tty1 </dev/tty1 >/dev/tty1 2>&1
 3. Edit /etc/profile; add at the bottom of the script: sudo python /directory/of/your/pythonscript.py
@@ -15,7 +16,7 @@ Afterward, save RPi/lastscrumdemo.py on an RPi and automate with the following o
 5. Restart the  RPi and open your webpage; it may take a few minutes for readings to register. Wave your hand in front of the sensor to test and see if there is any response from the IR sensor. Depending on the simplicity of your sensor/circuit, you may have a shorter detectable range.
 
 #----------------------------------
-#Thanks to Adafruit for RPi tips and MCP reference
+#Thanks to Adafruit for RPi instructions and MCP reference
 https://learn.adafruit.com/adafruitsraspberrypilesson4gpiosetup/adafruitpicode
 
 #Thanks to Jeremy Blythe for additional MCP reference
