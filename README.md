@@ -1,13 +1,13 @@
-# EK691 Practicum
+# EK691 Practicum, April 2015
 RPi sensor (tested on B+ model only, 1st gen)
 
 You need a Plotly and Twilio account, and a webpage that has these APIs embedded. (Something as simple as a blogspot page will work, just throw in the embedding HTML). This version does not have a properly functioning webcam, but a cam can be connected  on the board and managed on the same .py script.
 
 Hook up an infrared sensor to the GPIO ins, as well as ground/5V; this depends if you have an advanced layout with an ADC or just a straight connection to an analog IR sensor.
 
-lastscrumdemo.py needs to be edited with the appropriate phone#'s for the twilio feautre, and possibly ssh keys for the hosting webpage.
+scrumdemo.py needs to be edited with the appropriate phone#'s for the twilio feautre, and ssh keys for connecting your accounts.
 
-Afterward, save RPi/lastscrumdemo.py on an RPi and automate with the following on the board (tested only on Jessie Raspbian):
+Afterward, save RPi/scrumdemo.py on an RPi and automate with the following on the board (tested only on Jessie Raspbian):
 #
 1. Edit /etc/inittab; comment out 1:2345:respawn:/sbin/getty 115200 tty1
 2. Replace with 1:2345:respawn:/bin/login -f pi tty1 </dev/tty1 >/dev/tty1 2>&1
