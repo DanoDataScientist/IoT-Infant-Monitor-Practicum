@@ -1,12 +1,13 @@
-# oldwork-masters
+# EK691 Practicum
 RPi sensor
-#MCP code and instructions from:
 
-#Adafruit
+Run RPi/scrum4demo.py from an RPi board.
+
+#Thanks to Adafruit for RPi tips and MCP reference
 #https://learn.adafruit.com/adafruitsraspberrypilesson4gpiosetup/
 #adafruitpicode
 
-#Jeremy Blythe
+#Thanks to Jeremy Blythe for additional MCP reference
 #https://github.com/jerbly/Pi
 
 #----------------------------------
