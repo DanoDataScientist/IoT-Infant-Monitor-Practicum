@@ -15,22 +15,22 @@ from twilio.rest import TwilioRestClient
 from time import gmtime, strftime
 
 #initialize the Twilio API
-client = TwilioRestClient(account = 'ACdcfe2835ebc3cc5a64b326abe1d5f4d0', 
-	token = '0dfd8f8b7d00c2f282156422e7a625fd')
+client = TwilioRestClient(account = '', 
+	token = '')
 
 #initialize inputs from RPi and circuit board
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(04, GPIO.IN)
 
 #initialize credentials for Plotly API
-py.sign_in('atomicwest', 'e8q2zycckg')
+py.sign_in('accountname', '')
 
 #embed streaming plot
 #tls.embed('streaming-demos','6')
 
-tls.set_credentials_file(username='atomicwest', api_key='e8q2zycckg')
-tls.set_credentials_file(stream_ids=["gc1co66vqa", "dddgcrbmrk", "l0arxz77g6",
-	 "uigxym0iqj", "1337subfep"])
+tls.set_credentials_file(username='', api_key='')
+tls.set_credentials_file(stream_ids=["id1", "id2", "id3",
+	 "id4", "id5"])
 
 stream_ids = tls.get_credentials_file()['stream_ids']
 
@@ -113,7 +113,7 @@ while True:
 		#currsum = sum(calc[(len(calc) - 325):(len(calc) - 1)])
 
 		#if currsum == 0:
-			#client.messages.create(to='+17073155745', from_='+17073108595',
+			#client.messages.create(to='', from_='',
 				#body = "ALERT: BABY NOT BREATHING")
 		#4 minute cycle to override above cycle
 		#time.sleep(250) 
@@ -158,7 +158,7 @@ while True:
 		
 		outmsg = "Average: " + savgb + " breaths per " + sltime + " seconds\n" + summsg
 
-		#client.messages.create(to='+17073155745', from_='+17073108595',
+		#client.messages.create(to='', from_='',
 		#	body = outmsg)
 		#4 minute cycle to override above cycle
 		#time.sleep(250) 
